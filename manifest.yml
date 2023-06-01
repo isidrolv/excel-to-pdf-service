@@ -1,0 +1,8 @@
+applications:
+  - name: convertexceltopdf
+    host: 
+    path: target/excel-to-pdf-service-0.0.1-SNAPSHOT.jar
+    domain: 
+    memory: 1G## YAML Template.
+    
+
