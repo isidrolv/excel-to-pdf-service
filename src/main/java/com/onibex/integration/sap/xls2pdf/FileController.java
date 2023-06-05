@@ -56,7 +56,12 @@ public class FileController {
 //        XSSFWorkbook wb = new XSSFWorkbook(dataFile.getInputStream());
 
         File pdfFile = null;
-        File tempFile = File.createTempFile("xtemp", null);
+        File myDir = new File("Temp");
+        if (!myDir.exists()) {
+            myDir.mkdirs();
+        }
+        File tempFileN = File.createTempFile("xtemp", null);
+        File tempFile = new File("Temp/" + tempFileN.getName());
         String sourcefile = tempFile.getAbsolutePath();
         final Path path = Paths.get(tempFile.getAbsolutePath()).toAbsolutePath();
         Files.write(path, dataFile.getBytes(), StandardOpenOption.CREATE);
