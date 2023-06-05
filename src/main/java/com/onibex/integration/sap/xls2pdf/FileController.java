@@ -1,6 +1,5 @@
 package com.onibex.integration.sap.xls2pdf;
 
-
 import java.io.File;
 import java.io.FileOutputStream;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +28,7 @@ public class FileController {
     public FileController(FileService fileService) {
         this.fileService = fileService;
     }
-    
+
     @GetMapping("/healthCheck")
     @ResponseBody
     public ResponseEntity<String> healthCheck() {
@@ -50,35 +49,37 @@ public class FileController {
                 .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + file.getFilename() + "\"")
                 .body(file);
     }
-    
+
     @PostMapping("/convert")
     @ResponseBody
     public ResponseEntity<Resource> convertExcelToPdf(@RequestParam("file") MultipartFile dataFile) throws IOException {
-        XSSFWorkbook wb = new XSSFWorkbook(dataFile.getInputStream());
-        
-        File excelFile = File.createTempFile("xtemp", null);
-        final Path path = Paths.get(excelFile.getAbsolutePath()).toAbsolutePath();
+//        XSSFWorkbook wb = new XSSFWorkbook(dataFile.getInputStream());
+
+        File pdfFile = null;
+        File tempFile = File.createTempFile("xtemp", null);
+        String sourcefile = tempFile.getAbsolutePath();
+        final Path path = Paths.get(tempFile.getAbsolutePath()).toAbsolutePath();
         Files.write(path, dataFile.getBytes(), StandardOpenOption.CREATE);
-        
-        File pdfFile = File.createTempFile("temp", null);
-        Thread t = new Thread(() -> {
-            try {
-                
-                ExcelToPdfConverter.getInstance()
-                        .convert(excelFile,pdfFile);
-                
-            } catch (Exception e1) {
-                
-                System.err.println(e1);
-            } finally {
-                //convertButton.setEnabled(true);
-            }
-        });
-        t.start();
-        
-       Path file = Paths.get(pdfFile.getAbsolutePath())
-                    .resolve(pdfFile.getAbsolutePath());
-            Resource resource = new UrlResource(file.toUri());
+//        File excelFile = new File(tempFile);
+        File pdfOutDir = new File(path.getParent().toString());
+//        Thread t = new Thread(() -> {
+        try {
+
+        pdfFile =    ExcelToPdfConverter
+                    .getInstance()
+                    .convert(tempFile, pdfOutDir);
+            //EIceblueExcel2PdfConverter.convert(excelFile.getAbsolutePath());
+        } catch (Exception e1) {
+
+            System.err.println(e1);
+        } finally {
+            //convertButton.setEnabled(true);
+        }
+//        });
+//        t.start();
+
+        Path file = Paths.get(pdfFile.getAbsolutePath());
+        Resource resource = new UrlResource(file.toUri());
         return (ResponseEntity<Resource>) ResponseEntity.ok()
                 .header(HttpHeaders.CONTENT_TYPE, "application/pdf")
                 .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"\"")

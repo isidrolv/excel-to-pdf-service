@@ -47,13 +47,13 @@ public class ExcelToPdfConverter {
         printAction = action;
     }
 
-    public void convert(File inputDocument, File outputDir) throws Exception {
-
+    public File convert(File inputDocument, File outputDir) throws Exception {
+        File outputFile = null;
         if (!outputDir.exists()) {
             outputDir.mkdirs();
         }
-        File[] files = outputDir.listFiles();
-        Arrays.stream(files).forEach(f -> f.delete());
+        //File[] files = outputDir.listFiles();
+        //Arrays.stream(files).forEach(f -> f.delete());
         try {
             // Start an office process and connect to the started instance (on port 2002).
             officeManager = LocalOfficeManager.builder().install().officeHome(path).build();
@@ -63,16 +63,16 @@ public class ExcelToPdfConverter {
             sourceWorkbook.write(baout);
             InputStream bais = new ByteArrayInputStream(baout.toByteArray());
             String fileName = getFileName(inputDocument.getName());
-            File outputFile = new File(outputDir.getAbsolutePath() + File.separatorChar + fileName);
+            outputFile = new File(outputDir.getAbsolutePath() + File.separatorChar + fileName);
             JodConverter.convert(bais).to(outputFile).execute();
-            if (printAction != null) {
-                printAction.print("The " + HtmlUtils.getLinkFromPath(outputFile.getAbsolutePath()) + " was created");
-            }
             sourceWorkbook.close();
+        } catch (Exception ex) {
+            System.out.println(ex);
         } finally {
             // Stop the office process
             OfficeUtils.stopQuietly(officeManager);
         }
+        return outputFile;
     }
 
     private Workbook createWorkbook(File inputDocument) throws IOException, InvalidFormatException {
