@@ -1,0 +1,246 @@
+[
+  {
+    "product": "itext-core",
+    "licensee": {
+      "company": "Accely",
+      "name": "Julio Leyva",
+      "email": "julio.leyva@accely.us"
+    },
+    "key": "4ac4ddd8f1e5b9ccc9b534c04ed4a3f3c510996ef31e97c86f1fd43b4c927dcf",
+    "creationDate": "2023-06-06",
+    "expirationDate": "2023-07-06",
+    "onExpiration": "grace",
+    "gracePeriod": "1d0h0m",
+    "platform": "any",
+    "licenseType": "trial",
+    "productVersion": {
+      "major": 8,
+      "minor": 0
+    },
+    "limits": {
+      "default": {
+        "limitType": "unlimited",
+        "sendEvents": false
+      }
+    },
+    "licenseVersion": "1.0.0",
+    "sendStatistics": "disabled",
+    "signature": "KRFCT9mTDns8gFUbqbeYjbm9ir0CDrm2aHDrOUn0pHAnTkKMZmZ2H1v44u8v2fN0mjcUSxX5C34GIwai3EIW2+1q3mehOEK1dAMbKMDv38GrxUnJAuxVSr7EWWL8pXhvXIExXyK6E9se5EC33BkYVEPGPeJCT3uEYNMRxKRRRa7XC5zVZFtKgl2rJTQIVLQ1P2R7OtLDjdEygBZfSDg1THcdLUXsPcdMwVRCEYJel9J9yyXqlEHLAJSSVre/32KneMuI6pgTkDzAxJYVcBPXdd3kn3CYXvSoaDB9leFzl+hLwi0o110C9FNUDOJjHL1IZ6kEOnzumUIbw0Q/sBlk501caiAxEo3cgN1rCZOvtKrLwK9l4NXjVu+lkf+gqdaIjKg/Gr19obSx4XZT5TKlMFQTiRXZDW3r1qPTG/uG2V+Za1X0+9xH3k2XXUZ55taPfuFA3R5GSSKZcmYVFiz8XL2rLXDMJmfL0bLRX+6/TGYoz+76kOlXCOYO8+SIDeSCcTFjI7BwDi+sIP/q48l1LvDugL+TdHg4aYsVIyooZUk6O8ocmDG34RZEsTQgg+Gdu5BN3GisagQ0abh92RDdhb0TOa67a2mKn5B1Pl1ICY9SVcNPBbakXUGWo8hdlmGrswwNr2vfJsii4LI8/D++NjrV4vET3j3i7WUlHTEOdPs="
+  },
+  {
+    "product": "pdfXfa",
+    "licensee": {
+      "company": "Accely",
+      "name": "Julio Leyva",
+      "email": "julio.leyva@accely.us"
+    },
+    "key": "4ac4ddd8f1e5b9ccc9b534c04ed4a3f3c510996ef31e97c86f1fd43b4c927dcf",
+    "creationDate": "2023-06-06",
+    "expirationDate": "2023-07-06",
+    "onExpiration": "grace",
+    "gracePeriod": "1d0h0m",
+    "platform": "any",
+    "licenseType": "trial",
+    "productVersion": {
+      "major": 4
+    },
+    "limits": {
+      "default": {
+        "limitType": "unlimited",
+        "sendEvents": false
+      }
+    },
+    "licenseVersion": "1.0.0",
+    "sendStatistics": "disabled",
+    "signature": "TNYZ2uMBXJ/bQRuaLkcZ5kUDhRHmH/JcgNG05cr+PpR8hnVuR8ChtG4FkuAbi1OXyDFGLSpUVZkYTQ33370lFZlkkQmY+k97ViA/1a/XHhvkBNwNisI3B2OQK5JkNDRPPJrW4V9LRgHlvvoynn9Cc6/mrR01p3N70vzKOSb+PtvcAchnoDq3aL6Sn8zLARQFag1EdTsP8Bt+TRjrhngIReReqFA6x+62QMZ321F+emttfFTX5rux2UNxdRMFhbQMgwEE0HbI/B5cCKj+dmDnGBTZBqbV9AWKAyF4CMi9RvoGZuXoknk65fC50RXEtbyL/ht4OqPL+6b4MEyM3dIaKkYpIIqIH6unzlK2rRSUJ8dTm+eZtZywH677tHeiQtz+YoBcgFODeVVncdOVYJxYnaxX2dDdixvDqmTFR0yoaWsWEZK4azmcBKWCkLr5KjpRYHuAzlG6PRVLDprOLo98KwOzvE2rKInY7snX0EeAr4oM7Cbb//4dOuQoGCY9dJvrenAQlU8YQmi7qU/d/cSOpTy4ui5HifpvSFu0ezyk0BK0AQZk6cvlT0NUZ7qb0P3l3GeO/a9j5nE2qBkUZYNJfbMvTSs65UBbQv8+kuClxEdMDmv7UBmNK6bvX2DEAfuzM9xT99NlI5QX0ZrY0Yz2BnONbNfnSSc50+ICPXov4wQ="
+  },
+  {
+    "product": "pdfSweep",
+    "licensee": {
+      "company": "Accely",
+      "name": "Julio Leyva",
+      "email": "julio.leyva@accely.us"
+    },
+    "key": "4ac4ddd8f1e5b9ccc9b534c04ed4a3f3c510996ef31e97c86f1fd43b4c927dcf",
+    "creationDate": "2023-06-06",
+    "expirationDate": "2023-07-06",
+    "onExpiration": "grace",
+    "gracePeriod": "1d0h0m",
+    "platform": "any",
+    "licenseType": "trial",
+    "productVersion": {
+      "major": 4
+    },
+    "limits": {
+      "default": {
+        "limitType": "unlimited",
+        "sendEvents": false
+      }
+    },
+    "licenseVersion": "1.0.0",
+    "sendStatistics": "disabled",
+    "signature": "Hlx/majLyEFUGCCvy7ahypEnbNmAOt7W/zxX9wqMP/mb/XeHrmaY2Abc5eVT7UMdm+b5OXzqFoqg9h13nWyI4wVkTs9dTnnuC3XOuFEqI20Tn214ZFrz69k5X3ZGnvXHir5j1lDPIlAVjk++705g6d4qW18M+TRSx8qp41VtjvYa2AKDlc9GpELpeP0NRoO3uunoGg4q9tXT2tM+8WCrxC6ZMQSYjirI+zIGLI9lSGOwUU2tGMj6v/cX3CemDSLpZ7NzeFxxhqGnyNk7QHRVnTOwz5zD+UQgxfFNF6LX8oWJNTPunKnZAh+yN/GF9GtF6MM6YygFVSxOz4dkUhyhO0x5+MEBmNBFZJRM3z4knp7HoizjK0a/hF5bUliw9KsQUTpsyaEQiMAB5rnw2sQKSYnVsMKgSUGA6q8nENlwvbszeoByCLJjn7IPienuxYG+Yt8iZOUskcR/4ToGYhyDkiJurJv4vGIfTrdP71/oBUvKFSZaDPw1+UOZTUZDk6SAayZy6yMC95DyzvjgVp4ZQgUUqW00xdx9WFakun0GMjlQHUrcsXLP4MlU/u/2Lfzo27rDpARCbrSc62xTU+W4yhs1gIxXGX8gO3t1mgoRikZzqdX3pDA+GXj/UEww868YL96XtRG62gX3eOyEuY1cLC0W3VNmiX3SLYMx+MAXZyY="
+  },
+  {
+    "product": "pdfRender",
+    "licensee": {
+      "company": "Accely",
+      "name": "Julio Leyva",
+      "email": "julio.leyva@accely.us"
+    },
+    "key": "4ac4ddd8f1e5b9ccc9b534c04ed4a3f3c510996ef31e97c86f1fd43b4c927dcf",
+    "creationDate": "2023-06-06",
+    "expirationDate": "2023-07-06",
+    "onExpiration": "grace",
+    "gracePeriod": "1d0h0m",
+    "platform": "any",
+    "licenseType": "trial",
+    "productVersion": {
+      "major": 2
+    },
+    "limits": {
+      "default": {
+        "limitType": "unlimited",
+        "sendEvents": false
+      }
+    },
+    "licenseVersion": "1.0.0",
+    "sendStatistics": "disabled",
+    "signature": "EckUm00ZCn3D94OFF3rlQjaGjZuxthvHrIq4pn+Pa95YeVJvV71RbrYVa42ybBpxd93sICn6qvktBnzPtzYOi9Pvbf8Fn7pLdAm8LkLtGE6npHKHZNcrp7gO48RPSHC1IWjRhWhxbnlbXe1ZDdx6bmF77Q/BlRgBOXGiI8tZ/5i8yD7NsqCeoEqWHJn0DNu7lnxeIWV4FQHy8YRJjwLaTSkrZFmU3zJPcCxzAsGGBEO0Y6DA1ysMN2fqJv/CrCHSQWaJwgagevDHie9UWqb/1ynboULwrnQNh3REdmiOVnm2hToIDDLkLka3nw8TFwGSbVCnIVqydYq3CEvgdwR6K9QSyGEymRscGoBBftzgPheOEuBBvhm1nqFq4dKJpUSvr+SUr9E+IJR6xUCUlbRGS6jVnjMoaveVL4AdLamcz0ssxwRlydH0QBF2tNRvHwRlxu+WK4eRsizV51jWgr4UJjT8yq03ogSN/CKW1v4A8GoAz1PS7ioCijgH6lRFLjVzJrbcnwvQB7zL8IqYMMBoBKRlS/pc2rKbellMBPwJexhOPaSVUjZlP2apOYp4FAO7QVESiY+DP5NC6WpTUylwEL/3oDOrR8FsS58XR1lN+l+Zs/6cSb75EjPK7qm2+tMFArnMNu3QjgWLcwFsacObtfRexAYob/92WLNWdyDc+Us="
+  },
+  {
+    "product": "pdfOcr-tesseract4",
+    "licensee": {
+      "company": "Accely",
+      "name": "Julio Leyva",
+      "email": "julio.leyva@accely.us"
+    },
+    "key": "4ac4ddd8f1e5b9ccc9b534c04ed4a3f3c510996ef31e97c86f1fd43b4c927dcf",
+    "creationDate": "2023-06-06",
+    "expirationDate": "2023-07-06",
+    "onExpiration": "grace",
+    "gracePeriod": "1d0h0m",
+    "platform": "any",
+    "licenseType": "trial",
+    "productVersion": {
+      "major": 3
+    },
+    "limits": {
+      "default": {
+        "limitType": "unlimited",
+        "sendEvents": false
+      }
+    },
+    "licenseVersion": "1.0.0",
+    "sendStatistics": "disabled",
+    "signature": "HbmWgfmBWqBvqThNwQE+hq5uuvfqaaR1BGKItFkmF2QPV58T7pAOoMxCbjWoNEl2MzqaNgsKbk82O8Sh+483ds4mtRbI5YcO7rzm4x+wVJw/XSkQejMHM5uuHgTg7w3+zw454Tc+Tl7x3VKCgJ38CewIQ8iOuTQmMM7xTlSZ1eBZHUvd8DGPhduqdnbffvSvLlN6MDc9TO8WbkiCQgX8uwPouI6G1TXBmue9pIJoFO0IWZ2Ei4+rsPZaMkrBs5J+uqM58ZcvGFAg2taHaiBkf0mJ2Ay2aYreeAoG68bLPtNVC7q08V+UWnvKljF1tpUmBNT8BeUrLjJzSvcQ6d1C5dTIs97YSuru8REuxjYQlzv+oWPtvN2oNto8putV9swoOjHSmwMOXl+CdQxvj+cwPmGZCGvhvHMfGvd8DtCqB0xGnYy6b13Lxu+DPw3MZOPHUUpTwLQefAWLik9zThhRCgYBqG0wFQxKRxpLwTyG4vu/eiOTur5L7tk+FhK96tSDuO6a3kFqkJDLWaC+BfOnzRlCJNoe1dfaOvdjRezkLq6bAhAfxgU9XRPPqDOUoDGWLO/CPlNuWfZ0kun7Ka0OcAgO5ktQO/nQl0CRRzsR9N1kihhTAx+uUOb8pc2XiNwatGLHTAuykhGpRojTRrvLsPHnoKWS1XvWVnLeSGg43Nw="
+  },
+  {
+    "product": "pdfOptimizer",
+    "licensee": {
+      "company": "Accely",
+      "name": "Julio Leyva",
+      "email": "julio.leyva@accely.us"
+    },
+    "key": "4ac4ddd8f1e5b9ccc9b534c04ed4a3f3c510996ef31e97c86f1fd43b4c927dcf",
+    "creationDate": "2023-06-06",
+    "expirationDate": "2023-07-06",
+    "onExpiration": "grace",
+    "gracePeriod": "1d0h0m",
+    "platform": "any",
+    "licenseType": "trial",
+    "productVersion": {
+      "major": 3
+    },
+    "limits": {
+      "default": {
+        "limitType": "unlimited",
+        "sendEvents": false
+      }
+    },
+    "licenseVersion": "1.0.0",
+    "sendStatistics": "disabled",
+    "signature": "NNEEzPSXq+OOgDp737AHn2R/P7Gvd94Ae5fCUsHIFziZ91R7vEbsWwjzWAWSr+N6dbz/WzEuWXuwGjzOwdhk3mhBRmxTiIf2bWKWoTz8zrIUB0VmsHirHKDHMz8xrcYci/wgo8Raakfujc85dYMd1tFBiTu8dY8ewigypHSW+vw8iGMq/FyFSzLS/MT4iTGZk3XyjY1kLIBIXtvwuBsmVDKMQCV1eI58pJJHOVREVPp+bWbIMLAWLC5Sz1M9UM/wygYlulamRN3v2Yp+vAS8eJLPKLjckIcmkC0cvDTv2U5N0qHIXRAN9yxGFbFi+gus6V/pvBCp+p+DDhkYtUqL79W1tKFWzE1NKPeZBBFvGY9zBBcxdO9DV1MqlTt42avoVJsVTV+dl7LVa+TijUCmI0fZ3a7Ls6PHi83iG6L9YrwF0JCY31WCxSTMTGlgiycJ2yatSRkMVUtZbtAnrJdHEOfqssYdkF7AgU8pd9a4/BhQ3MipL3/Ks7lCkf1PxmzY9w6PP5htC21W8Ve7KexlQHxAH22tO7z2VGpxrecUxi7U1268ElkESVIo/1ABD2YSNP+osvlh3+p9O/d8BRleQR/iubS1rgWTISAvNi02fOZyovsqh8DShz5DzApKPx4C6NsXuTd9tuSJOHALl9m/xIXpNGMaBjU3eONtSn+Fl6g="
+  },
+  {
+    "product": "pdfHtml",
+    "licensee": {
+      "company": "Accely",
+      "name": "Julio Leyva",
+      "email": "julio.leyva@accely.us"
+    },
+    "key": "4ac4ddd8f1e5b9ccc9b534c04ed4a3f3c510996ef31e97c86f1fd43b4c927dcf",
+    "creationDate": "2023-06-06",
+    "expirationDate": "2023-07-06",
+    "onExpiration": "grace",
+    "gracePeriod": "1d0h0m",
+    "platform": "any",
+    "licenseType": "trial",
+    "productVersion": {
+      "major": 5
+    },
+    "limits": {
+      "default": {
+        "limitType": "unlimited",
+        "sendEvents": false
+      }
+    },
+    "licenseVersion": "1.0.0",
+    "sendStatistics": "disabled",
+    "signature": "IF28T1IH1ySibVRRe/O1t6akI+vUTXlWR4XQhHYQJvsbmwgFcfgaTW+jq5NaaTGBCIs6ee93LLKjOxFIVcDW49lPtSkVn+USVH9QrldpmJ8Bkfuk8EU5INSMiFuCVHLEL2mWkCLXoWIoy+vQE8pc1qqRrPdofYlNIc7uJsg7LHY3KbdC8e+B4PTIjRugLpZ1FSIqEIvoZYZ56R4fdKVmi3K6XoXqWKoOHH31MrFMhcjpx1fmPvp4DtpUmAO5QoEOysVG3co5nHXkZBYKkn8qheFCSsLwWE9zy/yRjEgtPLGiLj6rbECGcfPH9gFEekYe7kLMLHzpWMHjF6R+wFJXdP2lU+oPu89eJ3WJWA37P/b94OjVESnpmRTtZbg6jg1eqHi9ledSKnshAv7aWbNAOIdgOqyYcoZkIezn1Nzlu1YdGY5D1DtSQqgGCVZkXPDA3rUW5h/QuPlqRUeih5FEXjQRePclDIjLo+CPp63MNpuFmwZR/+LxlJjd53VRZQxn7PpKsWc27B1DcIITpCzi5HJVQGPxtIgAAPbHvm6LwaXDTyKQiv7XD6pRkGTQNMk75ZA/i87UeoLK5KGOBXuyxsB2fLcYg13ijXrM1pN8CadtZEGcrzPf24gc91yZfUNdjxij+5vBP/E1HBkVtjDDwKOW+dbMrJlSA6Uz42xTB70="
+  },
+  {
+    "product": "pdfCalligraph",
+    "licensee": {
+      "company": "Accely",
+      "name": "Julio Leyva",
+      "email": "julio.leyva@accely.us"
+    },
+    "key": "4ac4ddd8f1e5b9ccc9b534c04ed4a3f3c510996ef31e97c86f1fd43b4c927dcf",
+    "creationDate": "2023-06-06",
+    "expirationDate": "2023-07-06",
+    "onExpiration": "grace",
+    "gracePeriod": "1d0h0m",
+    "platform": "any",
+    "licenseType": "trial",
+    "productVersion": {
+      "major": 4
+    },
+    "limits": {
+      "default": {
+        "limitType": "unlimited",
+        "sendEvents": false
+      }
+    },
+    "licenseVersion": "1.0.0",
+    "sendStatistics": "disabled",
+    "signature": "dW/vUr3lZxToORtOTsFQ/6W92eF0MuMlP28YhXwd3f52+af6EEnoc3ir1SxSjl+HMIM32p+ejzrYunPar4qwujnpCw1cMSnsHyKjPGkbUgs9Gc3IRZz8VdQFKklEXmxxUkhuswbzCdvFOoBql+0lJOx73rVlL4vFMIqVnpolhrNqCrlG4eCQSkGunBDx5ubdi/kzkcelBxD2yT4rxqVl2DcMuKcZunkbNmEFwj3zbOdGSVzNO39rrDZg3eRsjvGkN1B46f+3yvk0lUJZB7M5AMpw9JN60Pu8koMJUZztAXvMcPxQ2MemXkeQ4G4gkPaQQUGagrU+xV6ln5/LinOZ3ljM15bUvCB0FLhm4RkhWxXZrm6ZjMNQMa0bp6MIPyHsx/WMPyOYNtDaAF/7RUDepq4a6V7TJwVtdn/knp1lrznFAico+Y+UcIUKrHiWfn+36a6QDHIYXtGk6qwZVhE4ENbdtHkmjJw84p0xKkJjhYM7d5PF072pgSCr5ZoQ4/p1HfgtI0qNHZONOzZ6IF6wHazNFjdeP1YLHabSAF9nMycl4GVjemOTSwV+YbeIJQ2EPqbsOYBZAaayG6n0X7vsjKRObc5mUD9PFjRB3WM44XJ4iJ04W2YhPO+69mdTuvBf4LqfMW49e68+jw7Ob78aFg2U6J4g6GSKtT2aOOaJqmM="
+  },
+  {
+    "product": "pdfOffice",
+    "licensee": {
+      "company": "Accely",
+      "name": "Julio Leyva",
+      "email": "julio.leyva@accely.us"
+    },
+    "key": "4ac4ddd8f1e5b9ccc9b534c04ed4a3f3c510996ef31e97c86f1fd43b4c927dcf",
+    "creationDate": "2023-06-06",
+    "expirationDate": "2023-07-06",
+    "onExpiration": "grace",
+    "gracePeriod": "1d0h0m",
+    "platform": "any",
+    "licenseType": "trial",
+    "productVersion": {
+      "major": 2
+    },
+    "limits": {
+      "default": {
+        "limitType": "unlimited",
+        "sendEvents": false
+      }
+    },
+    "licenseVersion": "1.0.0",
+    "sendStatistics": "disabled",
+    "signature": "XTvig0z+tqULuQE+dd4ea9yJ5qG/rsQLg/Jwpi1jUBqfXXeAnqp6F7eThiEDKsnz5BWbUJYqY8P/PWP1bTb9oL5SwQtOAl4AEBqmIAcWLlh1Fmc8U3mQxD/0BgX1PhaofU7tqeCdlM9BP77fnGBEIgyYMghaHV09aFiT1/2WexMPh83+I+AKKr7OpOQcvOoH+Y3TpVuC7m1IEsxoEqi6aQ6Ze9DaG+w431BwwTlNr99Z1uOEX8jQWxRB6bMWYpPWy9D6MbERnnIa0KLeS3kHwpC6nasiTgGUdSNkDNFph4zwGpzbtOx09kgzR346nWVYi2qGoy9XdSCXvgPqIT8ybpHIPO7eUqWi6rOSXdXo5vYzFdO4Xpx2tAbrS337HnwxpiINeK4mSSkxTtg1WQLwIOlcYFduuQeYkaxX1ro0AFhuoNBug4y3L0zcXJfXPNFXi6Rd2YBZOMLn4giTBhv8coSGcitfVgW+hrvl7edUsruIfVL7dM8CQ7JSdJ9KOJhH1crvgaEIJcOG6EqlyskLE5U8uxkYUEs3+koLqGw0KzxhV2SdgNdBkYRASsFgrsavMx+zRm2JqmxZzLvGBvUU+cUOa3+BBHg0z5UvFz0v524BIcIjQVniI4PgV9plsb4Ib6QP8kQ9j6+8ObxwwQvhgO3x52xJF9kiLJ/YoxgYYmI="
+  }
+]
