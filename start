@@ -1,0 +1,1 @@
+nohup mvn "-Dexec.args=-classpath %classpath com.onibex.integration.sap.xls2pdf.ExcelToPdfServiceApplication" -Dexec.executable=java -DskipTests=true org.codehaus.mojo:exec-maven-plugin:1.5.0:exec &
