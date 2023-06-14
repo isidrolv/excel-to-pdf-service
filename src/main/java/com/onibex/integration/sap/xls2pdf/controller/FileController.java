@@ -65,23 +65,16 @@ public class FileController {
     @ResponseBody
     public ResponseEntity<Resource> convertExcelToPdf(@RequestParam("file") MultipartFile dataFile) throws IOException {
         log.info("receiving file...");
-        File pdfFile = File.createTempFile("pdf", null);
         try {
             log.info("converting xlsx into pdf ..." + this.license);
-
             Workbook workbook = new Workbook(dataFile.getInputStream());
-
-
             log.info("Is licensed? " + workbook.isLicensed());
             PdfSaveOptions options = new PdfSaveOptions();
             options.setCompliance(PdfCompliance.PDF_A_1_A);
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
-            workbook.save(Util.getOutputPath(pdfFile.getPath()), options);
-
             workbook.save(baos, options);
             log.info("Convertion of xlsx file - done!");
             log.info("preparing for disposition...");
-
             Resource resource = new ByteArrayResource(baos.toByteArray());
             return ResponseEntity.ok()
                     .header(HttpHeaders.CONTENT_TYPE, "application/pdf")
@@ -92,7 +85,6 @@ public class FileController {
             log.error("an error ocurred while trying to convert xlsx file: {0}", e1);
             return ResponseEntity
                     .status(HttpStatusCode.valueOf(505))
-
                     .build();
         }
 
