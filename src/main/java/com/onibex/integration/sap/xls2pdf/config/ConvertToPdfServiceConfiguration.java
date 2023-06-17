@@ -13,10 +13,8 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.web.SecurityFilterChain;
 
-import java.io.File;
-import java.io.FileInputStream;
+
 import java.io.InputStream;
-import java.net.URL;
 
 /**
  * @author isidrolv
@@ -34,7 +32,6 @@ public class ConvertToPdfServiceConfiguration {
         log.warn("Disabiling crsf, so all requests are accepted!");
         http.csrf().disable();
         http.authorizeHttpRequests()
-                .requestMatchers("/**").permitAll()
                 .anyRequest()
                 .permitAll();
         return http.build();
@@ -49,7 +46,7 @@ public class ConvertToPdfServiceConfiguration {
         try {
             ClassLoader classLoader = getClass().getClassLoader();
             InputStream inputStream = classLoader.getResourceAsStream(licenseFileName);
-            log.info("ruta hacia el archivo de licencia: " + classLoader.getResource(licenseFileName).getPath());
+            log.info("Path to license file: " + classLoader.getResource(licenseFileName).getPath());
             license.setLicense(inputStream);
             log.info(new StringBuilder()
                     .append("Aspose Cells license loaded! \n\tlicensed = ")

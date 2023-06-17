@@ -1,5 +1,11 @@
 applications:
   - name: convertexceltopdf
-    path: target/excel-to-pdf-service-0.0.1-SNAPSHOT.jar
     random-route: true
+    path: ./target/excel-to-pdf-service-0.0.1-SNAPSHOT.jar
+    memory: 1024M
+    buildpack: sap_java_buildpack
+    env:
+      TARGET_RUNTIME: tomcat
+      JBP_CONFIG_COMPONENTS: "jres: ['com.sap.xs.java.buildpack.jdk.SAPMachineJDK']"
+
 
