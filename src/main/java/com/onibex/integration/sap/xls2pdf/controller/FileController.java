@@ -4,8 +4,13 @@ import com.aspose.cells.License;
 import com.aspose.cells.PdfCompliance;
 import com.aspose.cells.PdfSaveOptions;
 import com.aspose.cells.Workbook;
+import com.itextpdf.text.Document;
+import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.pdf.PdfWriter;
 import com.onibex.integration.sap.xls2pdf.service.FileService;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.poi.xwpf.usermodel.XWPFDocument;
+import org.apache.poi.xwpf.usermodel.XWPFParagraph;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -14,6 +19,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.util.Optional;
 
 @Slf4j
 @CrossOrigin(origins = "http://localhost:4200")
@@ -21,12 +27,14 @@ import java.io.IOException;
 @RequestMapping("api/files")
 public class FileController {
 
-    private final License license;
+    public static final String APPLICATION_VND_XLSX = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+    public static final String APPLICATION_VND_MS_EXCEL = "application/vnd.ms-excel";
+    public static final String APPLICATION_VND_WORD_DOCUMENT = "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
+    private final FileService fileService;
 
     @Autowired
-    public FileController(License license, FileService fileService) {
-        this.license = license;
-        log.info("License found: " + this.license);
+    public FileController(FileService fileService) {
+        this.fileService = fileService;
     }
 
     @GetMapping("/healthCheck")
@@ -41,26 +49,30 @@ public class FileController {
     @ResponseBody
     public ResponseEntity<byte[]> convertExcelToPdf(@RequestParam("file") MultipartFile dataFile) throws IOException {
         log.info("receiving file...");
-        try {
-            log.info("converting xlsx into pdf ..." + this.license);
-            Workbook workbook = new Workbook(dataFile.getInputStream());
-            log.info("Is licen shased? " + workbook.isLicensed());
-            PdfSaveOptions options = new PdfSaveOptions();
-            options.setCompliance(PdfCompliance.PDF_A_1_A);
-            ByteArrayOutputStream baos = new ByteArrayOutputStream();
-            workbook.save(baos, options);
-            log.info("Convertion of xlsx file - done!");
-            log.info("preparing for disposition...");
-            byte[] resource = baos.toByteArray();
-            return ResponseEntity.ok()
-                    .contentType(MediaType.APPLICATION_PDF)
-                    .body(resource);
-        } catch (Exception e1) {
-            log.error("an error ocurred while trying to convert xlsx file: {0}", e1);
-            return ResponseEntity
-                    .internalServerError()
-                    .build();
+        ResponseEntity<byte[]> response = null;
+        Optional<String> contentType = Optional.of(dataFile.getContentType());
+        switch (contentType.get()) {
+            case APPLICATION_VND_XLSX:
+                log.info("file type is xlsx");
+                response = this.fileService.convertExcel(dataFile);
+                break;
+            case APPLICATION_VND_MS_EXCEL:
+                log.info("file type is xls");
+                response = this.fileService.convertExcel(dataFile);
+                break;
+            case APPLICATION_VND_WORD_DOCUMENT:
+                log.info("file type is doc");
+                response = this.fileService.convertWord(dataFile);
+                break;
+            default:
+                log.error("file type is not supported");
+                return ResponseEntity
+                        .badRequest()
+                        .build();
         }
 
+        return response;
     }
+
+
 }
