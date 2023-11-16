@@ -1,18 +1,18 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.onibex.integration.sap.xls2pdf.config;
 
 import com.aspose.cells.License;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.web.servlet.MultipartConfigFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.util.unit.DataSize;
+import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 
+import javax.servlet.MultipartConfigElement;
 import java.io.InputStream;
 
 /**
@@ -22,6 +22,7 @@ import java.io.InputStream;
 @EnableWebSecurity
 @Slf4j
 public class ConvertToPdfServiceConfiguration {
+
 
     @Value("${aspose.licenseFileName}")
     private String licenseFileName;
@@ -59,4 +60,7 @@ public class ConvertToPdfServiceConfiguration {
         }
         return license;
     }
+
+
+
 }

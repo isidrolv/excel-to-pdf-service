@@ -33,8 +33,13 @@ public class FileService {
 
     @Value("${files.path}")
     private String filesPath;
-    @Autowired
+
     private License license;
+
+    @Autowired
+    public FileService(License license) {
+        this.license = license;
+    }
 
     /**
      * Download a file from the server
@@ -69,19 +74,19 @@ public class FileService {
         try {
             log.info("converting xlsx into pdf ..." + this.license);
             Workbook workbook = new Workbook(dataFile.getInputStream());
-            log.info("Is licen shased? " + workbook.isLicensed());
+            log.info("Is licensed? " + workbook.isLicensed());
             PdfSaveOptions options = new PdfSaveOptions();
             options.setCompliance(PdfCompliance.PDF_A_1_A);
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
             workbook.save(baos, options);
-            log.info("Convertion of xlsx file - done!");
+            log.info("Conversion of xlsx file - done!");
             log.info("preparing for disposition...");
             byte[] resource = baos.toByteArray();
             return ResponseEntity.ok()
                     .contentType(MediaType.APPLICATION_PDF)
                     .body(resource);
         } catch (Exception e1) {
-            log.error("an error ocurred while trying to convert xlsx file: {0}", e1);
+            log.error("an error occurred while trying to convert xlsx file: {0}", e1);
             return ResponseEntity
                     .internalServerError()
                     .build();

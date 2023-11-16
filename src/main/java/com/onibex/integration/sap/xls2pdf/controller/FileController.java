@@ -65,7 +65,7 @@ public class FileController {
                 response = this.fileService.convertWord(dataFile);
                 break;
             default:
-                log.error("file type is not supported");
+                log.info("file type is not supported");
                 return ResponseEntity
                         .badRequest()
                         .build();
