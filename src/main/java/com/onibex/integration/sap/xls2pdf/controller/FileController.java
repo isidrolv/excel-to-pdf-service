@@ -1,23 +1,12 @@
 package com.onibex.integration.sap.xls2pdf.controller;
 
-import com.aspose.cells.License;
-import com.aspose.cells.PdfCompliance;
-import com.aspose.cells.PdfSaveOptions;
-import com.aspose.cells.Workbook;
-import com.itextpdf.text.Document;
-import com.itextpdf.text.Paragraph;
-import com.itextpdf.text.pdf.PdfWriter;
 import com.onibex.integration.sap.xls2pdf.service.FileService;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.poi.xwpf.usermodel.XWPFDocument;
-import org.apache.poi.xwpf.usermodel.XWPFParagraph;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.Optional;
 
@@ -38,7 +27,6 @@ public class FileController {
     }
 
     @GetMapping("/healthCheck")
-    @ResponseBody
     public ResponseEntity<String> healthCheck() {
         return ResponseEntity
                 .ok()
@@ -46,7 +34,6 @@ public class FileController {
     }
 
     @PostMapping("/convert")
-    @ResponseBody
     public ResponseEntity<byte[]> convertExcelToPdf(@RequestParam("file") MultipartFile dataFile) throws IOException {
         log.info("receiving file...");
         ResponseEntity<byte[]> response = null;

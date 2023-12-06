@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfi
 import org.springframework.boot.web.servlet.MultipartConfigFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.util.unit.DataSize;
+import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 
 import javax.servlet.MultipartConfigElement;
 
@@ -18,6 +19,8 @@ public class ExcelToPdfServiceApplication {
     public static void main(String[] args) {
         SpringApplication.run(ExcelToPdfServiceApplication.class, args);
     }
+
+
 
     @Bean(name = "multipartConfigElement")
     public MultipartConfigElement multipartConfigElement() {

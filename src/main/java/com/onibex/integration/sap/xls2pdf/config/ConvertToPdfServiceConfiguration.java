@@ -30,7 +30,7 @@ public class ConvertToPdfServiceConfiguration {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         log.warn("Disabiling crsf, so all requests are accepted!");
-        http.csrf().disable();
+        //http.csrf().disable();
         http.authorizeHttpRequests()
                 .anyRequest()
                 .permitAll();

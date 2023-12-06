@@ -8,14 +8,11 @@ import com.aspose.cells.Workbook;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfWriter;
-import com.onibex.integration.sap.xls2pdf.controller.DownloadException;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.apache.poi.xwpf.usermodel.XWPFParagraph;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.core.io.Resource;
-import org.springframework.core.io.UrlResource;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -23,9 +20,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.net.MalformedURLException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 
 @Slf4j
 @Service
@@ -39,29 +33,6 @@ public class FileService {
     @Autowired
     public FileService(License license) {
         this.license = license;
-    }
-
-    /**
-     * Download a file from the server
-     * @param filename
-     * @return
-     * @throws DownloadException
-     * @author Isidro Leos
-     */
-    public Resource download(String filename) throws DownloadException {
-        try {
-            Path file = Paths.get(filesPath)
-                    .resolve(filename);
-            Resource resource = new UrlResource(file.toUri());
-
-            if (resource.exists() || resource.isReadable()) {
-                return resource;
-            } else {
-                throw new CreatePdfException("Could not read the file!");
-            }
-        } catch (MalformedURLException | CreatePdfException ex) {
-            throw new DownloadException(ex.getMessage());
-        }
     }
 
 
@@ -89,6 +60,7 @@ public class FileService {
             log.error("an error occurred while trying to convert xlsx file: {0}", e1);
             return ResponseEntity
                     .internalServerError()
+                    .header("Exception", e1.getMessage())
                     .build();
         }
     }
